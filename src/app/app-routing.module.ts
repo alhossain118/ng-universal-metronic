@@ -4,6 +4,11 @@ import { AuthGuard } from './modules/auth/services/auth.guard';
 
 export const routes: Routes = [
   {
+    path: 'test',
+    loadChildren: () =>
+      import('./pages/test/test.module').then((m) => m.TestModule),
+  },
+  {
     path: 'auth',
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
@@ -25,6 +30,7 @@ export const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabledBlocking'
+    // relativeLinkResolution: 'legacy'
 })],
   exports: [RouterModule],
 })

@@ -34,6 +34,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.modeService.init();
+    // this.modeService.init();
+    console.log("hit")
   }
 }

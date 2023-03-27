@@ -54,4 +54,8 @@ function appInitializer(authService: AuthService) {
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(){
+    console.log("ran")
+  }
+}
